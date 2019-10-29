@@ -27,12 +27,16 @@ Grey dark 3: #999
     --grey-dark-1: #333;
     --grey-dark-2: #777;
     --grey-dark-3: #999;
+    --line:1px solid var(--grey-light-2);
 }
 *,
 *::after,
 *::before{
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
+
 html
 {
     margin:0;
