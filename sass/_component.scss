@@ -318,6 +318,7 @@
 .paragraph
 {
     color:var(--grey-dark-2);
+    
     &:not(:last-of-type)
     {
         margin-bottom: 2rem;
@@ -386,3 +387,57 @@
         }
     }
 }
+
+///Review Box
+
+.review-box
+{
+    padding: 3rem 3rem;
+    background-color: #fff;
+    
+    display: flex;
+    flex-direction: column;
+    & > .paragraph
+    {
+        margin-bottom: 2rem;
+    }
+
+}
+///Reviewer
+.reviewer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__img
+    {
+        width:4rem;
+        height: 4rem;
+        border-radius: 50%;
+    }
+    &__user
+    {   margin-right: auto;
+        margin-left: 0.9rem;
+
+        &-name
+        {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        &-date
+        {
+            font-size: 1rem;
+        }
+    }
+    &__rating
+    {
+        font-size: 2.3rem;
+        color:var(--primary);
+        font-weight: 540;
+       
+    }
+}
+//Button for show all
+
