@@ -26,7 +26,7 @@ Grey dark 3: #999
   --grey-dark-1: #333;
   --grey-dark-2: #777;
   --grey-dark-3: #999;
-  --line:1px solid var(--grey-light-2); }
+  --line:2px solid var(--grey-light-2); }
 
 *,
 *::after,
@@ -342,8 +342,11 @@ body {
 .review-box {
   padding: 3rem 3rem;
   background-color: #fff;
-  display: flex;
-  flex-direction: column; }
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden; }
   .review-box > .paragraph {
     margin-bottom: 2rem; }
 
@@ -369,3 +372,44 @@ body {
     font-size: 2.3rem;
     color: var(--primary);
     font-weight: 540; }
+
+.cta {
+  padding: 3.5rem;
+  text-align: center;
+  background-color: #fff; }
+  .cta__header {
+    text-transform: uppercase;
+    color: var(--grey-dark-3);
+    font-size: 2.2rem;
+    font-weight: 300;
+    padding: 3rem; }
+  .cta__btn {
+    outline: none;
+    color: #fff;
+    position: relative;
+    background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark));
+    border-radius: 100px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    overflow: hidden; }
+    .cta__btn > * {
+      transition: all .2s;
+      display: inline-block;
+      width: 100%;
+      height: 100%; }
+    .cta__btn-visible {
+      padding: 2rem 7.5rem; }
+    .cta__btn-invisible {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      padding: 2rem 3rem; }
+    .cta__btn:hover {
+      background-image: linear-gradient(to right, var(--primary-dark), var(--primary-light)); }
+    .cta__btn:hover .cta__btn-visible {
+      transform: translateY(100%); }
+    .cta__btn:hover .cta__btn-invisible {
+      top: 0; }
+    .cta__btn:focus {
+      animation: popout 1s infinite; }
