@@ -125,6 +125,13 @@
     font-size: 1.4rem;
     margin-top:3rem;
     list-style: none;
+    @media only screen and (max-width:$bp-medium)
+    {
+        display: flex;
+        margin:0;
+        
+    }
+    
     &__link:link,
     &__link:visited{
         color: var(--grey-light-1);
@@ -136,12 +143,21 @@
         padding: 1.5rem 3rem;
         position: relative;
         z-index: 10;
+        @media only screen and (max-width:$bp-medium)
+        {
+            justify-content: center;
+           
+        }
     }
 
     &__item
     {
         position: relative;   
-
+        @media only screen and (max-width:$bp-medium)
+        {
+            flex:1;
+            padding: 2rem;
+        }
         &::before{
             content: '';
             background-color: var(--primary);
@@ -161,6 +177,10 @@
         &:not(:last-child)
         {
             margin-top:.3rem;
+            @media only screen and (max-width:$bp-medium)
+            {
+                margin: 0;                    
+            }
         }
         &:hover::before
             {
@@ -183,6 +203,7 @@
         height: 1.5rem;
         fill: currentColor;
         margin-right: 2rem;
+
         
     }
 }
@@ -192,6 +213,10 @@
     text-align: center;
     color: var(--grey-light-4);
     padding:2.5rem;
+    @media only screen and (max-width:$bp-medium)
+    {
+        display: none;
+    }
 }
 
 ////Gallery photos
@@ -354,7 +379,7 @@
             height: 1rem;
             display: inline-block;
         }
-    } 
+    }
 
 }
 
@@ -372,7 +397,9 @@
         margin-right: auto;
     }
     &__freinds
-    {
+    {   
+        display: flex;
+        
         &-photo
         {
             width:4rem;
@@ -382,7 +409,7 @@
             border: 3px solid #fff ;
             &:not(:last-child)
             {
-                margin-right: -1.75rem;
+                margin-right: -2rem;
             }
         }
     }
@@ -391,7 +418,6 @@
 ///Review Box
 .review-box
 {
-    padding: 3rem 3rem;
     background-color: #fff;
     box-shadow: var(--shadow-light);
     padding: 3rem;
@@ -401,6 +427,10 @@
     & > .paragraph
     {
         margin-bottom: 2rem;
+    }
+    @media only screen and (max-width:$bp-medium)
+    {
+        padding: 2rem;
     }
 
 }
@@ -447,7 +477,10 @@
     padding: 3.5rem;
     text-align: center;
     background-color: #fff;
-
+    @media only screen and (max-width:$bp-medium)
+    {
+        padding: 2rem;
+    }
     &__header
     {
         text-transform: uppercase;

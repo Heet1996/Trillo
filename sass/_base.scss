@@ -29,6 +29,15 @@ Grey dark 3: #999
     --grey-dark-3: #999;
     --line:2px solid var(--grey-light-2);
 }
+
+
+//break points
+
+$bp-largest:75em;   //1200
+$bp-large: 68.75em; //1050
+$bp-medium:56.25em;
+
+
 *,
 *::after,
 *::before{
@@ -43,6 +52,11 @@ html
     padding:0;
     box-sizing: border-box;
     font-size: 62.5%;
+    @media only screen and (max-width: $bp-large) {
+            font-size: 50%;
+    }
+
+
 }
 body{
     background-image: linear-gradient(to bottom right,var(--primary-light),var(--primary-dark));
